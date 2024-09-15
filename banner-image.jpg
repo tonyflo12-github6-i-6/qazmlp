@@ -1,0 +1,34 @@
+import requests
+
+# رابط الصورة المباشر
+url = 'https://raw.githubusercontent.com/yaya1426/html/5e751d43a14754b8da91e915adf3d73f9e1f61ed/images/banner-image.jpg'
+
+# اسم الملف الذي ترغب بحفظ الصورة به
+file_name = 'banner-image.jpg'
+
+# تحميل الصورة وحفظها
+response = requests.get(url)
+if response.status_code == 200:
+    with open(file_name, 'wb') as file:
+        file.write(response.content)
+    print(f"تم تحميل الصورة وحفظها باسم {file_name}")
+else:
+    print(f"حدث خطأ أثناء تحميل الصورة. كود الحالة: {response.status_code}")
+
+import requests
+
+# رابط الصورة المباشر
+url = 'https://raw.githubusercontent.com/yaya1426/html/5e751d43a14754b8da91e915adf3d73f9e1f61ed/images/categories-01.jpg'
+
+# اسم الملف الذي ترغب بحفظ الصورة به
+file_name = 'categories-01.jpg'
+
+# تحميل الصورة وحفظها
+response = requests.get(url)
+if response.status_code == 200:
+    with open(file_name, 'wb') as file:
+        file.write(response.content)
+    print(f"تم تحميل الصورة وحفظها باسم {file_name}")
+else:
+    print(f"حدث خطأ أثناء تحميل الصورة. كود الحالة: {response.status_code}")
+
